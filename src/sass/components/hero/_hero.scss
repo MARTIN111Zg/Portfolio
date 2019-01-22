@@ -1,0 +1,202 @@
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__container {
+    width: 90%;
+    min-height: calc(100vh - 95px);
+    border-top: 3px solid var(--grey);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    &--left {
+        background-color: var(--smoke);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        opacity: 0;
+        transform: translateX(-10rem) scale(0.5);
+        backface-visibility: hidden;
+
+    }
+
+    &--right {
+        background-image: linear-gradient(to right bottom, $color-secundary-light, $color-secundary-dark), url(../img/right-background.jpeg);
+        background-blend-mode: screen;
+        background-size: cover;
+        opacity: 0;
+        transform: translateX(10rem) scale(.6);
+        backface-visibility: hidden;
+    }
+}
+
+.user__icons {
+    background: var(--smoke);
+    list-style: none;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--grey);
+
+    &__item {
+        padding-top: 1rem;
+
+        &--google:hover a svg {
+            fill: var(--google);
+        }
+
+        &--github:hover a svg {
+            fill: var(--github);
+        }
+
+        &--linkedin:hover a svg {
+            fill: var(--linkedin);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}
+
+.user__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: var(--grey);
+}
+
+.text__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    padding: 2rem 2rem;
+    background-color: var(--grey);
+    margin: 4rem 3rem 2rem 3rem;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 4px 32px -19px rgba(255, 245, 255, 1);
+    -moz-box-shadow: 10px 4px 32px -19px rgba(255, 245, 255, 1);
+    box-shadow: 10px 4px 32px -19px rgba(255, 245, 255, 1);
+    -webkit-clip-path: polygon(50% 0%, 100% 8%, 100% 91%, 50% 100%, 0 93%, 0 8%);
+    clip-path: polygon(50% 0%, 100% 8%, 100% 91%, 50% 100%, 0 93%, 0 8%);
+    transition: all 1.6s ease;
+
+    &__h1 {
+        color: var(--smoke);
+        font-size: 3.2rem;
+        letter-spacing: .8rem;
+        text-shadow: 2px 2px 4px #000;
+        text-align: center;
+        line-height: 1;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+
+    }
+
+    &__h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: .4rem;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        border-top: 2px solid #000;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px #000;
+        color: var(--smoke);
+    }
+
+    &__p {
+        font-size: 1.8rem;
+        letter-spacing: .3rem;
+        line-height: 1.5;
+        padding: 4rem 1rem;
+        font-weight: 100;
+        color: var(--smoke);
+        opacity: 0;
+        transform: scale(0);
+    }
+
+
+
+}
+
+.text__container:hover {
+    background-color: var(--blue);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+
+.text__container:hover h1 {
+    border-bottom: 2px solid var(--smoke);
+}
+
+.text__container:hover h3 {
+    border-top: 2px solid var(--smoke);
+}
+
+.text__vertical__h3 {
+    writing-mode: vertical-rl;
+    background-color: var(--smoke);
+
+    letter-spacing: 1rem;
+    color: var(--grey);
+    font-weight: 500;
+    justify-self: flex-end;
+    font-size: 1.6rem;
+    border-right: 1px solid #000;
+    text-shadow: 1px 1px 2px #000;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    border: 1px solid var(--grey);
+
+
+}
+
+.contact__info {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__link {
+        text-decoration: none;
+        color: var(--grey);
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s ease-in-out;
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--grey);
+        margin-right: 1.1rem;
+        transition: all .4s ease-in-out;
+    }
+}
+
+.contact__info__link:hover {
+    color: var(--google);
+}
+
+.contact__info__link:hover svg {
+    fill: var(--google);
+}

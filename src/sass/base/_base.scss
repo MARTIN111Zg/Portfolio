@@ -1,0 +1,40 @@
+:root {
+    --white: #FFF;
+    --smoke: #F8F8F8;
+    --grey: #101010;
+    --google: #d34836;
+    --linkedin: #007bb5;
+    --github: #32506d;
+    --blue: #002266;
+}
+
+$color-secundary-light:#141414ee;
+$color-secundary-dark:#000000;
+$bp-largest:75em;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+}
