@@ -6,10 +6,20 @@
 
 .hero__container {
     width: 90%;
-    min-height: calc(100vh - 95px);
+    min-height: calc(100vh - 97px);
     border-top: 3px solid var(--grey);
     display: grid;
     grid-template-columns: 2fr 1fr;
+
+    @media only screen and (max-width: 1065px) {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 770px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, calc(100vh - 15vh));
+        height: auto;
+    }
 
     &--left {
         background-color: var(--smoke);
@@ -30,6 +40,10 @@
         opacity: 0;
         transform: translateX(10rem) scale(.6);
         backface-visibility: hidden;
+
+        @media only screen and (max-width: 770px) {
+            width: 100%;
+        }
     }
 }
 
@@ -87,6 +101,13 @@
     -webkit-clip-path: polygon(50% 0%, 100% 8%, 100% 91%, 50% 100%, 0 93%, 0 8%);
     clip-path: polygon(50% 0%, 100% 8%, 100% 91%, 50% 100%, 0 93%, 0 8%);
     transition: all 1.6s ease;
+
+    @media only screen and (max-width: 770px) {
+        align-self: center;
+        padding: 4rem 2rem;
+        margin: 2rem 2rem;
+    }
+
 
     &__h1 {
         color: var(--smoke);

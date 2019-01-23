@@ -10719,12 +10719,25 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var TweenMax = _TweenMaxBase.default;
 exports.default = exports.TweenMax = TweenMax;
 TweenMax._autoActivated = [_TimelineLite.default, _TimelineMax.default, _CSSPlugin.default, _AttrPlugin.default, _BezierPlugin.default, _RoundPropsPlugin.default, _DirectionalRotationPlugin.default, _EasePack.Back, _EasePack.Elastic, _EasePack.Bounce, _EasePack.RoughEase, _EasePack.SlowMo, _EasePack.SteppedEase, _EasePack.Circ, _EasePack.Expo, _EasePack.Sine, _EasePack.ExpoScaleEase];
-},{"./TweenLite.js":"../node_modules/gsap/TweenLite.js","./TweenMaxBase.js":"../node_modules/gsap/TweenMaxBase.js","./CSSPlugin.js":"../node_modules/gsap/CSSPlugin.js","./AttrPlugin.js":"../node_modules/gsap/AttrPlugin.js","./RoundPropsPlugin.js":"../node_modules/gsap/RoundPropsPlugin.js","./DirectionalRotationPlugin.js":"../node_modules/gsap/DirectionalRotationPlugin.js","./TimelineLite.js":"../node_modules/gsap/TimelineLite.js","./TimelineMax.js":"../node_modules/gsap/TimelineMax.js","./BezierPlugin.js":"../node_modules/gsap/BezierPlugin.js","./EasePack.js":"../node_modules/gsap/EasePack.js"}],"js/index.js":[function(require,module,exports) {
+},{"./TweenLite.js":"../node_modules/gsap/TweenLite.js","./TweenMaxBase.js":"../node_modules/gsap/TweenMaxBase.js","./CSSPlugin.js":"../node_modules/gsap/CSSPlugin.js","./AttrPlugin.js":"../node_modules/gsap/AttrPlugin.js","./RoundPropsPlugin.js":"../node_modules/gsap/RoundPropsPlugin.js","./DirectionalRotationPlugin.js":"../node_modules/gsap/DirectionalRotationPlugin.js","./TimelineLite.js":"../node_modules/gsap/TimelineLite.js","./TimelineMax.js":"../node_modules/gsap/TimelineMax.js","./BezierPlugin.js":"../node_modules/gsap/BezierPlugin.js","./EasePack.js":"../node_modules/gsap/EasePack.js"}],"js/nav.js":[function(require,module,exports) {
+var btn = document.querySelector(".bar__wrapper");
+var navw = document.querySelector(".nav__wrapper__items");
+
+var slider = function slider() {
+  navw.classList.toggle("active");
+};
+
+btn.addEventListener("click", function () {
+  slider();
+});
+},{}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
 require("../sass/main.scss");
 
 var _TweenMax = _interopRequireDefault(require("gsap/TweenMax"));
+
+require("./nav");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10803,7 +10816,7 @@ _TweenMax.default.to(para, 2, {
   ease: Expo.easeInOut,
   delay: 15
 });
-},{"../sass/main.scss":"sass/main.scss","gsap/TweenMax":"../node_modules/gsap/TweenMax.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../sass/main.scss":"sass/main.scss","gsap/TweenMax":"../node_modules/gsap/TweenMax.js","./nav":"js/nav.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -10830,7 +10843,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52861" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50991" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
